@@ -1,13 +1,21 @@
+@config "../tailwind.config.ts";
 @import "tailwindcss";
+
+@plugin "tailwindcss-animate";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --body-color: #1c1c22;
+  --background: 0 0% 100%;
+  --foreground: 240 10% 4%;
 }
 
 @layer base {
   body {
-    background-color: var(--body-color);
-    @apply text-white leading-loose;
+    @apply bg-bodyColor text-white leading-loose;
+  }
+  .hoverEffect {
+    @apply transition-all cursor-pointer duration-300 ease-in-out;
   }
 }

@@ -13,3 +13,7 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+// bodyColor: "#1c1c22",
+// lightSky: "#00ff99",
+// hoverColor: "#00e187",

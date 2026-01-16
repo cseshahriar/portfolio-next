@@ -15,7 +15,6 @@ const config: Config = {
         bodyColor: "#1c1c22",
         lightSky: "#00ff99",
         hoverColor: "#00e187",
-        border: "hsl(var(--border))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
       },

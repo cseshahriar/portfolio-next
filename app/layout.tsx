@@ -20,7 +20,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Md. Shahriar Hosen | Full Stack Python Django Developer",
+  title: "Md. Shahriar Hosen | Full Stack Web Developer",
   description: "A portfolio website",
 };
 
