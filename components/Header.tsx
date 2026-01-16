@@ -1,9 +1,19 @@
+"use client";
+
 import { NavbarData } from "@/constants";
 import Container from "./Container";
 import Logo from "./Logo";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
+import Sidebar from "./Sidebar";
+import { useState } from "react";
 
 const Header = () => {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const pathname = usePathname();
+    console.log("test", isSidebarOpen);
+
     return (
         <header className="border-b border-b-hoverColor/10">
             <Container className="py-5 flex items-center justify-between">
@@ -11,11 +21,41 @@ const Header = () => {
                 <div className="hidden md:inline-flex items-center gap-7 text-sm uppercase tracking-wide font-medium">
                     {
                         NavbarData?.map((item) => (
-                            <Link href={item?.href} key={item?.title}>{item?.title}</Link>
+                            <Link href={item?.href} key={item?.title}
+                                className={`hover:text-hoverColor hoverEffect relative group overflow-x-hidden ${pathname === item?.href && "text-hoverColor" }`}
+                            >
+                                {item?.title}
+                                <span className={`w-full h-px bg-hoverColor inline-block absolute left-0 bottom-0 group-hover:translate-x-0 hoverEffect ${pathname === item?.href ? "translate-x-0" : "-translate-x-[105%]"}` } />
+                            </Link>
                         ))
                     }
+                    <button className="text-sm bg-lightSky/10 px-4 py-2
+                            rounded-md border border-hoverColor/10
+                            hover:border-hoverColor hover:bg-hoverColor
+                            hover:text-black hoverEffect overflow-hidden
+                            ">
+                        <Link
+                            href={'/resume.pdf'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Hire Me</Link>
+                    </button>
                 </div>
+
+                <button className="inline-flex md:hidden relative"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                >
+                    <Menu className="hover:text-hoverColor hoverEffect"/>
+                </button>
             </Container>
+
+            <div className="md:hidden">
+                <Sidebar
+                    isOpen={isSidebarOpen}
+                    onClose={() => setIsSidebarOpen(false)}
+                    pathname={pathname}
+                />
+            </div>
         </header>)
     ;
 }
