@@ -17,7 +17,10 @@ const Header = () => {
     return (
         <header className="border-b border-b-hoverColor/10">
             <Container className="py-5 flex items-center justify-between">
+                {/* Logo */}
                 <Logo title="Shahriar Hosen" subtitle="</>" />
+
+                {/* Navbar  */}
                 <div className="hidden md:inline-flex items-center gap-7 text-sm uppercase tracking-wide font-medium">
                     {
                         NavbarData?.map((item) => (
@@ -29,6 +32,8 @@ const Header = () => {
                             </Link>
                         ))
                     }
+
+                    {/* Resume pdf  */}
                     <button className="text-sm bg-lightSky/10 px-4 py-2
                             rounded-md border border-hoverColor/10
                             hover:border-hoverColor hover:bg-hoverColor
