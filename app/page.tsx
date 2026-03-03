@@ -14,7 +14,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl">Hello I&apos;m</h2>
           <h1 className="text-lightSky text-3xl md:text-5xl tracking-normal">Md. Shahriar Hosen</h1>
         </div>
-        <p className="w-auto md:max-w-[500px] text-white/50 font-thin leading-6">
+        <p className="w-auto md:max-w-[500px] text-white/60 leading-6">
           Senior Python & Django Developer | DRF API Expert | AWS & Linux Deployment | CI/CD with GitHub Actions I am a Full-Stack Web Developer with over 5 years of professional experience in building, deploying, and maintaining production-ready web applications. I specialize in backend-heavy systems with Django and DRF, while also having solid frontend experience.
         </p>
 
@@ -25,6 +25,7 @@ export default function Home() {
           Download CV <Download className="w-4 h-4" />
         </a>
         <SocialLinks />
+        <br/>
         <Statistics />
       </div>
 
