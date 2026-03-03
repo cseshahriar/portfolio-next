@@ -15,7 +15,7 @@ const Header = () => {
     console.log("test", isSidebarOpen);
 
     return (
-        <header className="border-b border-b-hoverColor/10">
+        <header className="border-b border-b-hoverColor/10 sticky top-0 z-50 bg-bodyColor">
             <Container className="py-5 flex items-center justify-between">
                 {/* Logo */}
                 <Logo title="Shahriar Hosen" subtitle="</>" />

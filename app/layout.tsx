@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import StairTransition from "@/components/StairTransition";
+import PageTransition from "@/components/PageTransition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,7 +35,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header/>
-        {children}
+        <StairTransition />
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   );
