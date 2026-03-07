@@ -4,7 +4,7 @@ import Photo from "@/components/Photo";
 import SocialLinks from "@/components/SocialLinks";
 import Statistics from "@/components/Statistics";
 import { Download } from "lucide-react";
-import Link from "next/link";
+
 
 export default function Home() {
   return (
