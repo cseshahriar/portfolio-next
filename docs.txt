@@ -17,3 +17,4 @@ export default function RootLayout({ children }) {
 // bodyColor: "#1c1c22",
 // lightSky: "#00ff99",
 // hoverColor: "#00e187",
+https://www.youtube.com/watch?v=P7swSlCbAj8&t=10227s
