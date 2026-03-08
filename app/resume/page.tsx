@@ -59,7 +59,7 @@ const ResumePage = () => {
                                                     <h3 className="text-lg font-semibold">{item.role}</h3>
                                                     <p className='text-white/80'>{item?.company}</p>
                                                 </div>
-                                                <div className="flex items-center text-white/80">
+                                                <div className="flex items-center text-white/80 gap-2">
                                                     <Calendar/> {item?.period}
                                                 </div>
                                             </div>
@@ -96,7 +96,7 @@ const ResumePage = () => {
                                                     <h3 className="text-lg font-semibold">{item.degree}</h3>
                                                     <p className='text-white/80'>{item?.institute}</p>
                                                 </div>
-                                                <div className="flex items-center text-white/80">
+                                                <div className="flex items-center text-white/80 gap-2">
                                                     <Calendar/> {item?.period}
                                                 </div>
                                             </div>
@@ -142,7 +142,6 @@ const ResumePage = () => {
                                 }
                             </div>
                         </TabsContent>
-
 
                         {/* About */}
                         <TabsContent value='about'>

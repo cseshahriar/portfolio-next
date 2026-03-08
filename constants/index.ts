@@ -1,3 +1,7 @@
+import projectOne from "@/images/projectOne.png";
+import projectTwo from "@/images/projectTwo.png";
+import projectThree from "@/images/projectThree.png";
+
 export const NavbarData = [
     {title: "Home", href: "/"},
     {title: "Services", href: "/services"},
@@ -107,3 +111,36 @@ export const tabContent = {
         languages: ["Bangla", "English"]
     }
 };
+
+export const projects = [
+    {
+        id: "01",
+        title: "E-commerce Platform",
+        category: "Full Stack",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        stacks: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
+        image: projectOne,
+        liveUrl: "https://github.com/cseshahriar",
+        githubUrl: "https://github.com/cseshahriar"
+    },
+    {
+        id: "02",
+        title: "E-commerce Platform",
+        category: "Full Stack",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        stacks: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
+        image: projectTwo,
+        liveUrl: "https://github.com/cseshahriar",
+        githubUrl: "https://github.com/cseshahriar"
+    },
+    {
+        id: "03",
+        title: "E-commerce Platform",
+        category: "Full Stack",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        stacks: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
+        image: projectThree,
+        liveUrl: "https://github.com/cseshahriar",
+        githubUrl: "https://github.com/cseshahriar"
+    },
+];
