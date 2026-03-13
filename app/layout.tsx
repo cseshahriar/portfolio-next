@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   description: "A portfolio website",
 };
 
+import { Toaster } from 'react-hot-toast';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,6 +41,9 @@ export default function RootLayout({
         <PageTransition>
           {children}
         </PageTransition>
+        <Toaster position="bottom-right" toastOptions={{
+          style:{background: "#000", color: "#fff"}
+        }}/>
       </body>
     </html>
   );
