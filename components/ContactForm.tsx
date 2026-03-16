@@ -100,130 +100,140 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="space-y-4" onSubmit={handleSubmit}>
-      <Title className="text-2xl md:text-4xl">Let&apos;s work together</Title>
+    <div className="space-y-4 relative overflow-visible">
+      <form className="space-y-4" onSubmit={handleSubmit}>
+        <Title className="text-2xl md:text-4xl">Let&apos;s work together</Title>
 
-      <p className="text-white/60 text-sm md:text-base">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ad quos
-        officiis nam tenetur similique minus hic veritatis.
-      </p>
+        <p className="text-color/60 text-sm md:text-base">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ad quos
+          officiis nam tenetur similique minus hic veritatis.
+        </p>
 
-      {success ? (
-        <div>
-          <motion.div
-            className="flex items-center justify-center gap-3 py-6"
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1 }}
-          >
-            <div className="border-2 border-lightSky w-20 h-20 rounded-full flex items-center justify-center text-lightSky">
-              <Check className="w-10 h-10" />
-            </div>
+        {success ? (
+          <div>
+            <motion.div
+              className="flex items-center justify-center gap-3 py-6"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              <div className="border-2 border-lightSky w-20 h-20 rounded-full flex items-center justify-center text-lightSky">
+                <Check className="w-10 h-10" />
+              </div>
 
-            <div>
-              <h2 className="text-4xl leading-none font-extrabold text-transparent text-outline">
-                Thank you!
-              </h2>
-              <p>{status}</p>
-            </div>
-          </motion.div>
-        </div>
-      ) : (
-        <>
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1">
-              <Input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                disabled={isLoading}
-                className="mb-1 disabled:placeholder:text-white/20 disabled:bg-white/20"
-              />
-
-              <Input
-                type="tel"
-                name="phone"
-                placeholder="Your phone number"
-                value={formData.phone}
-                onChange={handleChange}
-                disabled={isLoading}
-                className="disabled:placeholder:text-white/20 disabled:bg-white/20"
-              />
-            </div>
-
-            <div className="flex-1">
-              <Input
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                disabled={isLoading}
-                className="mb-1 disabled:placeholder:text-white/20 disabled:bg-white/20"
-              />
-
-              <Input
-                type="text"
-                name="address"
-                placeholder="Your address"
-                value={formData.address}
-                onChange={handleChange}
-                disabled={isLoading}
-                className="disabled:placeholder:text-white/20 disabled:bg-white/20"
-              />
-            </div>
+              <div>
+                <h2 className="text-4xl leading-none font-extrabold text-transparent text-outline">
+                  Thank you!
+                </h2>
+                <p>{status}</p>
+              </div>
+            </motion.div>
           </div>
+        ) : (
+          <>
+            <div className="flex flex-col md:flex-row gap-1">
+              <div className="flex-1">
+                <Input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  disabled={isLoading}
+                  className="mb-2 disabled:placeholder:text-white/20 disabled:bg-white/20"
+                />
 
-          <Textarea
-            name="message"
-            placeholder="Write message here"
-            rows={5}
-            value={formData.message}
-            onChange={handleChange}
-            disabled={isLoading}
-            className="disabled:placeholder:text-white/20 disabled:bg-white/20"
-          />
+                <Input
+                  type="tel"
+                  name="phone"
+                  placeholder="Your phone number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  disabled={isLoading}
+                  className="mb-2 disabled:placeholder:text-white/20 disabled:bg-white/20"
+                />
+              </div>
 
-          <Select
-            onValueChange={handleSelectChange}
-            value={formData.service}
-            disabled={isLoading}
-          >
-            <SelectTrigger>
-              <SelectValue placeholder="Select a service" />
-            </SelectTrigger>
+              <div className="flex-1">
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Your email address"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  disabled={isLoading}
+                  className="mb-2 disabled:placeholder:text-white/20 disabled:bg-white/20"
+                />
 
-            <SelectContent className="bg-bodyColor text-white border-white/20">
-              <SelectGroup>
-                <SelectLabel>Select a service</SelectLabel>
+                <Input
+                  type="text"
+                  name="address"
+                  placeholder="Your address"
+                  value={formData.address}
+                  onChange={handleChange}
+                  disabled={isLoading}
+                  className="mb-2 disabled:placeholder:text-white/20 disabled:bg-white/20"
+                />
+              </div>
+            </div>
 
-                <SelectItem value="Web development">
-                  Web Development
-                </SelectItem>
+            <div className="flex flex-col gap-1">
+                <Textarea
+                  name="message"
+                  placeholder="Write message here"
+                  rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  disabled={isLoading}
+                  className="disabled:placeholder:text-color/20 disabled:bg-color/20"
+                />
+                <br/>
+                <Select
+                  onValueChange={handleSelectChange}
+                  value={formData.service}
+                  disabled={isLoading}
+                >
+                  <SelectTrigger className="disabled:placeholder:text-color/20 disabled:bg-color/20">
+                    <SelectValue placeholder="Select a service" />
+                  </SelectTrigger>
 
-                <SelectItem value="Apps development">
-                  Apps Development
-                </SelectItem>
+                  <SelectContent className="g-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700">
+                    <SelectGroup>
+                      <SelectLabel  className="text-gray-500 dark:text-gray-400">Select a service</SelectLabel>
 
-                <SelectItem value="Server">Server</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+                      <SelectItem value="Web development"
+                        className="hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700"
+                      >
+                        Web Development
+                      </SelectItem>
+                      <SelectItem value="Apps development"
+                        className="hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700"
+                      >
+                        Apps Development
+                      </SelectItem>
 
-          <Button
-            type="submit"
-            disabled={isLoading}
-            className="w-full py-4 bg-lightSky/5 text-white/80 border border-lightSky/20 hover:border-lightSky hover:bg-lightSky/10 hover:text-hoverColor hoverEffect"
-          >
-            {isLoading ? "Submitting message..." : "Send Message"}
-          </Button>
-        </>
-      )}
-    </form>
+                      <SelectItem value="Server"
+                      className="hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700"
+                      >Server Management</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+
+                <Button
+                  type="submit"
+                  disabled={isLoading}
+                  className="mt-8 w-full py-4 bg-hoverColor text-white dark:text-color/80 border border-lightSky/20 hover:border-lightSky hover:bg-lightSky/10 hover:text-hoverColor hoverEffect"
+                >
+                  {isLoading ? "Submitting message..." : "Send Message"}
+                </Button>
+            </div>
+
+          </>
+        )}
+      </form>
+    </div>
   );
 };
 

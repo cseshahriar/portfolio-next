@@ -17,7 +17,7 @@ const Header = () => {
     console.log("test", isSidebarOpen);
 
     return (
-        <header className="border-b border-b-hoverColor/10 sticky top-0 z-50 bg-bodyColor">
+        <header className="border-b border-b-hoverColor/10 sticky top-0 z-50 bg-color">
             <Container className="py-5 flex items-center justify-between">
                 {/* Logo */}
                 <Logo title="Md. Shahriar Hosen" subtitle="" />
@@ -39,7 +39,7 @@ const Header = () => {
                     <button className="text-sm bg-lightSky/10 px-4 py-2
                             rounded-md border border-hoverColor/10
                             hover:border-hoverColor hover:bg-hoverColor
-                            hover:text-black hoverEffect overflow-hidden
+                            hover:text-color hoverEffect overflow-hidden
                             ">
                         <Link
                             href={'/resume.pdf'}

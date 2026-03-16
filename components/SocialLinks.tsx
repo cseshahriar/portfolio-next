@@ -28,12 +28,12 @@ const SocialData = [
 const SocialLinks = () => {
     return(
         <TooltipProvider>
-            <div className='flex items-center gap-3'>
+            <div className='flex items-center gap-3 mt-2'>
                 {SocialData?.map((item) => (
                     <Tooltip key={item?.title}>
                         <TooltipTrigger asChild>
                             <Link href={item?.href} target="_blank" rel="noopener noreferrer"
-                                className="text-lightSky/80 hover:text-hoverColor/80 border border-lightSky/30 p-2.5 rounded-full hover:bg-lightSky/10 hover:text-lightSky hoverEffect"
+                                className="dark:text-white text-lightSky/80 hover:text-hoverColor/80 border border-lightSky/30 p-2.5 rounded-full hover:bg-lightSky/10 hover:text-lightSky hoverEffect"
                             >
                                 {item?.icon}
                             </Link>

@@ -1,13 +1,11 @@
-import type { Metadata } from "next";
-import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
-
 import "./globals.css";
+import type { Metadata } from "next";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
 
 import Header from "@/components/Header";
 import StairTransition from "@/components/StairTransition";
 import PageTransition from "@/components/PageTransition";
-
-import { ThemeProvider } from "next-themes";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,12 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={poppins.className}>
-        <Header/>
-        <StairTransition />
-        <PageTransition>
-          {children}
-        </PageTransition>
+      <body className={`poppins.className bg-color text-color transition-colors`}>
+          <ThemeProvider>
+            <Header/>
+            <StairTransition />
+            <PageTransition>
+                {children}
+            </PageTransition>
+        </ThemeProvider>
         <Toaster position="bottom-right" toastOptions={{
           style:{background: "#000", color: "#fff"}
         }}/>

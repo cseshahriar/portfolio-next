@@ -7,7 +7,7 @@ import hero from "@/images/shahriar.png"
 
 const Photo = () => {
 
-  const circleColors = ["#00ff99", "#00cc66", "#00994d"]
+  const circleColors = ["#004AAD", "#003B8A"]
 
   const circleVariants: Variants = {
     initial: {

@@ -13,8 +13,10 @@ const config: Config = {
       },
       colors: {
         bodyColor: "#1c1c22",
-        lightSky: "#00ff99",
-        hoverColor: "#00e187",
+        lightSky: "#004AAD",
+        hoverColor: "#003B8A",
+        darkLightSky: "#1E3A8A",
+        darkHoverColor: "#153270",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
       },

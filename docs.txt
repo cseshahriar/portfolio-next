@@ -18,3 +18,21 @@ export default function RootLayout({ children }) {
 // lightSky: "#00ff99",
 // hoverColor: "#00e187",
 https://www.youtube.com/watch?v=P7swSlCbAj8&t=10227s
+
+dark mode:
+----------
+attribute="class" applies .dark to <html>
+defaultTheme="system" respects OS settings
+Works cleanly with Tailwind’s dark: utilities
+
+
+<div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white">
+  <header className="p-4 flex justify-between dark:bg-gray-800">
+    <h1>My Site</h1>
+    <ThemeToggle />
+  </header>
+
+  <main className="p-6">
+    {/* Your content here */}
+  </main>
+</div>

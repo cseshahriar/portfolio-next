@@ -7,17 +7,30 @@
 @plugin "tailwindcss-animate";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 240 10% 4%;
+  --background: white;
+  --foreground: #1c1c22;
+  --theme-primary: #004AAD;
+  --theme-secondary: #003B8A;
+}
+.dark {
+  --background: #1c1c22;
+  --foreground: white;
 }
 
 @layer base {
+  .text-color{
+    color: var(--foreground);
+  }
+  .bg-color {
+    background-color: var(--background);
+  }
   body {
-    @apply bg-bodyColor text-white leading-loose;
-    /* Use Inter first, fall back to Roboto and sans-serif */
+    background: var(--background);
+    color: var(--foreground);
     font-family: 'Inter', 'Roboto', sans-serif;
   }
   .hoverEffect {
@@ -27,7 +40,7 @@
     -webkit-text-stroke: 1px #ffffff;
   }
   .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px #004AAD;
   }
 }
 

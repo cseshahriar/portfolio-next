@@ -35,7 +35,7 @@ const ContactPage = () => {
                         <div key={index} className="flex items-center space-x-4">
                             <span className="bg-lightSky/5 p-4 rounded-">{item?.icon}</span>
                             <div>
-                                <h3 className="text-white/60 text-sm font-semibold">{item?.title}</h3>
+                                <h3 className="text-color/60 text-sm font-semibold">{item?.title}</h3>
                                 <p>{item?.description}</p>
                             </div>
                         </div>

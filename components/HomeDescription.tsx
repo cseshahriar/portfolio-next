@@ -26,12 +26,12 @@ const HomeDescription = () => {
                     .map((char, index) => <motion.span
                         key={index}
                         initial={{ color: "rgb(156, 163 175)" }}
-                        animate={{ color: isComplete ? "rgb(255, 255, 255)" : "rgb(156, 163 175)" }}
+                        animate={{ color: isComplete ? "text-gray-500" : "rgb(156, 163 175)" }}
                         transition={{ duration: 0.5, delay: index * 0.03 }}
                     >
                         {char}
                     </motion.span>)
-                ) : <span className="text-white/60">{description}</span>
+                ) : <span className="dark:text-white/60">{description}</span>
             }
         </motion.p>
     )
