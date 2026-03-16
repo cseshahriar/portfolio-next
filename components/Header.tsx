@@ -1,13 +1,15 @@
 "use client";
 
-import { NavbarData } from "@/constants";
-import Container from "./Container";
-import Logo from "./Logo";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
-import Sidebar from "./Sidebar";
 import { useState } from "react";
+import { Menu } from "lucide-react";
+
+import Logo from "./Logo";
+import Sidebar from "./Sidebar";
+import Container from "./Container";
+import { NavbarData } from "@/constants";
+import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,7 +20,7 @@ const Header = () => {
         <header className="border-b border-b-hoverColor/10 sticky top-0 z-50 bg-bodyColor">
             <Container className="py-5 flex items-center justify-between">
                 {/* Logo */}
-                <Logo title="Shahriar Hosen" subtitle="</>" />
+                <Logo title="Md. Shahriar Hosen" subtitle="" />
 
                 {/* Navbar  */}
                 <div className="hidden md:inline-flex items-center gap-7 text-sm uppercase tracking-wide font-medium">
@@ -45,6 +47,9 @@ const Header = () => {
                             rel="noopener noreferrer"
                             >Hire Me</Link>
                     </button>
+
+                    {/* Dark and light mode  */}
+                    <ThemeToggle />
                 </div>
 
                 <button className="inline-flex md:hidden relative"

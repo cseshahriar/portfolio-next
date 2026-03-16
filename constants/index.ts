@@ -19,10 +19,42 @@ export const staticsData = [
 ];
 
 export const servicesData = [
-    {_id: "01", title: "Frontend Web Development", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod reprehenderit cumque nisi? Sequi, impedit. Perspiciatis soluta quaerat beatae cupiditate culpa?", href: "https://github.com/cseshahriar"},
-    {_id: "02", title: "Backend Web Development", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod reprehenderit cumque nisi? Sequi, impedit. Perspiciatis soluta quaerat beatae cupiditate culpa?", href: "https://github.com/cseshahriar"},
-    {_id: "03", title: "Server Maintenance", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod reprehenderit cumque nisi? Sequi, impedit. Perspiciatis soluta quaerat beatae cupiditate culpa?", href: "https://github.com/cseshahriar"},
-    {_id: "04", title: "Apps Development", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod reprehenderit cumque nisi? Sequi, impedit. Perspiciatis soluta quaerat beatae cupiditate culpa?", href: "https://github.com/cseshahriar"},
+    {
+        _id: "01",
+        title: "Custom Website Development",
+        description:"Building fast, modern, and scalable websites using Next.js and Tailwind CSS. Perfect for businesses, startups, and personal brands.",
+        href: "#",
+    },
+    {
+        _id: "02",
+        title: "Full Stack Web Applications",
+        description: "Developing powerful full-stack applications with modern technologies including Next.js, Node.js, APIs, and databases.",
+        href: "#",
+    },
+    {
+        _id: "03",
+        title: "API Development & Integration",
+        description: "Designing secure and scalable REST APIs and integrating third-party services like payment gateways, authentication systems, and external APIs.",
+        href: "#",
+    },
+    {
+        _id: "04",
+        title: "UI/UX Implementation",
+        description: "Transforming design concepts into responsive, pixel-perfect interfaces using Tailwind CSS and modern frontend frameworks.",
+        href: "#",
+    },
+    {
+        _id: "05",
+        title: "Performance Optimization",
+        description: "Improving website speed, SEO performance, and user experience through optimization and best coding practices.",
+        href: "#",
+    },
+    {
+        _id: "06",
+        title: "Deployment & Cloud Setup",
+        description: "Deploying applications to platforms like Vercel, VPS, or cloud environments with CI/CD and performance monitoring.",
+        href: "#",
+    },
 ];
 
 export const tabContent = {

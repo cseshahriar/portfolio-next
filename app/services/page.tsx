@@ -1,33 +1,75 @@
-import Container from '@/components/Container'
-import Title from '@/components/Title'
-import { servicesData } from '@/constants'
-import { ArrowUp } from 'lucide-react'
-import Link from 'next/link'
-import React from 'react'
+import Container from "@/components/Container";
+import Title from "@/components/Title";
+import { servicesData } from "@/constants";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import React from "react";
 
 const ServicesPage = () => {
     return (
-        <div className='min-h-[80vh] py-5 md:py-10'>
+        <section className="min-h-[80vh] py-10">
             <Container>
-                <Title>Services I Provide</Title>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12">
-                    {
-                        servicesData.map((item) => (
-                            <div key={item?._id} className="flex flex-col gap-2 p-6 bg-lightSky/5 hover:bg-lightSky/10 border border-lightSky/20 hover:border-lightSky/30 rounded-lg shadow-md shadow-lightSky/10 group hover:shadow-lg hoverEffect">
-                                <div className="flex flex-row items-center justify-between">
-                                    <p className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover hoverEffect">{item?._id}</p>
-                                    <Link href={item?.href} target='_blank'><ArrowUp className="rotate-45 text-hoverColor" /></Link>
-                                </div>
-                                <h2 className='font-semibold'>{item?.title}</h2>
-                                <p className="text-sm md:text-base text-white/80">{item?.description}</p>
-                                <div className='border-b border-b-white/20 mt-2'/>
-                            </div>
-                        ))
-                    }
-                </div>
-                </Container>
-        </div>
-    )
-}
+                <Title className="text-center">Services I Provide</Title>
 
-export default ServicesPage
+                <p className="text-center max-w-2xl mx-auto text-gray-400 mb-12">
+                I help startups, businesses, and individuals build modern web
+                applications using cutting-edge technologies like Next.js, Tailwind
+                CSS, and scalable backend systems.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {servicesData.map((item) => (
+                        <div
+                        key={item._id}
+                        className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 shadow-md hover:shadow-xl"
+                        >
+                        {/* Top section */}
+                        <div className="flex justify-between items-center mb-5">
+                            <span className="text-4xl font-bold text-gray-600 group-hover:text-white transition">
+                            {item._id}
+                            </span>
+
+                            <Link href={item.href} target="_blank">
+                            <ArrowUpRight className="w-6 h-6 text-gray-400 group-hover:text-white transition" />
+                            </Link>
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-lg font-semibold mb-3 group-hover:text-lightSky">
+                            {item.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p className="text-sm text-gray-400 leading-relaxed">
+                            {item.description}
+                        </p>
+
+                        {/* Bottom border */}
+                        <div className="mt-6 border-b border-white/10"></div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* CTA Section */}
+                <div className="mt-20 text-center">
+                <h2 className="text-2xl font-semibold mb-4">
+                    Have a project in mind?
+                </h2>
+
+                <p className="text-gray-400 mb-6">
+                    Let&#39;s work together to build something amazing.
+                </p>
+
+                <Link
+                    href="/contact"
+                    className="px-6 py-3 rounded-lg bg-lightSky text-black font-medium hover:opacity-90 transition"
+                >
+                    Start a Project
+                </Link>
+                </div>
+            </Container>
+        </section>
+    );
+};
+
+export default ServicesPage;
