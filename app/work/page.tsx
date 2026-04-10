@@ -6,7 +6,6 @@ import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { projects } from '@/constants';
 import Image from 'next/image';
-import React from 'react'
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { ArrowUp, Github } from 'lucide-react'

@@ -39,13 +39,13 @@ const Header = () => {
                     <button className="text-sm bg-lightSky/10 px-4 py-2
                             rounded-md border border-hoverColor/10
                             hover:border-hoverColor hover:bg-hoverColor
-                            hover:text-color hoverEffect overflow-hidden
+                            hover:text-white hoverEffect overflow-hidden
                             ">
                         <Link
                             href={'/resume.pdf'}
                             target="_blank"
                             rel="noopener noreferrer"
-                            >Hire Me</Link>
+                            >HIRE ME</Link>
                     </button>
 
                     {/* Dark and light mode  */}

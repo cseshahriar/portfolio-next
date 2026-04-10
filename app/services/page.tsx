@@ -9,12 +9,11 @@ const ServicesPage = () => {
     return (
         <section className="min-h-[80vh] py-10">
             <Container>
-                <Title className="text-center text-4xl">Services I Provide</Title>
+                <Title className="text-center text-4xl">Services We Provide</Title>
 
                 <p className="text-center max-w-2xl mx-auto mb-12">
                     I help startups, businesses, and individuals build modern web
-                    applications using cutting-edge technologies like Next.js, Tailwind
-                    CSS, and scalable backend systems.
+                    applications using cutting-edge technologies like Python, Django, DRF, FastAPI, PostgreSQL, MySQL, React, Next.js, Tailwindcss, Linux, AWS and scalable backend systems.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

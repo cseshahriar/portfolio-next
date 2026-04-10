@@ -1,6 +1,5 @@
-import projectOne from "@/images/projectOne.png";
-import projectTwo from "@/images/projectTwo.png";
-import projectThree from "@/images/projectThree.png";
+import projectOne from "@/images/ecommerce-project.png";
+import projectTwo from "@/images/job-portal.png";
 
 export const NavbarData = [
     {title: "Home", href: "/"},
@@ -148,30 +147,20 @@ export const projects = [
         id: "01",
         title: "E-commerce Platform",
         category: "Full Stack",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        description: "A production-ready full-stack e-commerce application built using Python, Django, and Django REST Framework (DRF), designed with scalability, performance, and real-world business requirements in mind. The system supports product variants, guest checkout, and direct checkout flows, closely mirroring modern e-commerce platforms",
         stacks: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
         image: projectOne,
-        liveUrl: "https://github.com/cseshahriar",
-        githubUrl: "https://github.com/cseshahriar"
+        liveUrl: "https://github.com/cseshahriar/emart",
+        githubUrl: "https://github.com/cseshahriar/emart"
     },
     {
         id: "02",
-        title: "E-commerce Platform",
+        title: "Job Portal Platform",
         category: "Full Stack",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        description: "A full-stack job portal web application that connects job seekers and employers on a single platform. Users can register, browse job listings, and apply for positions, while recruiters can post and manage job openings. The system includes authentication, role-based access, and an admin panel for managing users, jobs, and overall platform activity, ensuring a smooth and efficient recruitment process.",
         stacks: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
         image: projectTwo,
-        liveUrl: "https://github.com/cseshahriar",
-        githubUrl: "https://github.com/cseshahriar"
-    },
-    {
-        id: "03",
-        title: "E-commerce Platform",
-        category: "Full Stack",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        stacks: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
-        image: projectThree,
-        liveUrl: "https://github.com/cseshahriar",
-        githubUrl: "https://github.com/cseshahriar"
+        liveUrl: "https://github.com/cseshahriar/jobs-portal",
+        githubUrl: "https://github.com/cseshahriar/jobs-portal"
     },
 ];
