@@ -148,7 +148,7 @@ export const projects = [
         title: "E-commerce Platform",
         category: "Full Stack",
         description: "A production-ready full-stack e-commerce application built using Python, Django, and Django REST Framework (DRF), designed with scalability, performance, and real-world business requirements in mind. The system supports product variants, guest checkout, and direct checkout flows, closely mirroring modern e-commerce platforms",
-        stacks: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
+        stacks: ["Python", "Django", "DRF", "PostgreSQL"],
         image: projectOne,
         liveUrl: "https://github.com/cseshahriar/emart",
         githubUrl: "https://github.com/cseshahriar/emart"
@@ -158,7 +158,7 @@ export const projects = [
         title: "Job Portal Platform",
         category: "Full Stack",
         description: "A full-stack job portal web application that connects job seekers and employers on a single platform. Users can register, browse job listings, and apply for positions, while recruiters can post and manage job openings. The system includes authentication, role-based access, and an admin panel for managing users, jobs, and overall platform activity, ensuring a smooth and efficient recruitment process.",
-        stacks: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
+        stacks: ["Django", "DRF", "Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
         image: projectTwo,
         liveUrl: "https://github.com/cseshahriar/jobs-portal",
         githubUrl: "https://github.com/cseshahriar/jobs-portal"
